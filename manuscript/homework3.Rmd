@@ -40,7 +40,7 @@ The clinic filter also required exact labels. It included 88 Clinic A records an
 
 ### Difference in mean pulse
 
-The original script reported a Clinic B minus Clinic A difference of **16.075 beats/min**. It used only exact-matching clinic labels and treated `-99` as a pulse value. After correcting both problems, the clinic means are `r sprintf("%.3f", mean(records$pulse[records$site == "Clinic A"], na.rm=TRUE))` and `r sprintf("%.3f", mean(records$pulse[records$site == "Clinic B"], na.rm=TRUE))` beats/min, so the correct difference is **`r sprintf("%.3f", clinic_pulse_difference(records)["difference_b_minus_a"])` beats/min**. The original estimate is **`r sprintf("%.2f", 16.075 / clinic_pulse_difference(records)["difference_b_minus_a"])` times** larger.
+The original script reported a Clinic B minus Clinic A difference of **16.075 beats/min** because it used only exact-matching clinic labels and treated `-99` as a pulse value. After correcting both problems, the clinic means are `r sprintf("%.3f", mean(records$pulse[records$site == "Clinic A"], na.rm=TRUE))` and `r sprintf("%.3f", mean(records$pulse[records$site == "Clinic B"], na.rm=TRUE))` beats/min, so the correct difference is **`r sprintf("%.3f", clinic_pulse_difference(records)["difference_b_minus_a"])` beats/min**. The original estimate is **`r sprintf("%.2f", 16.075 / clinic_pulse_difference(records)["difference_b_minus_a"])` times** larger.
 
 ## Part 2: Project structure
 

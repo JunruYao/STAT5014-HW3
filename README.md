@@ -1,26 +1,33 @@
 # STAT 5014 — Homework 3
 
-This project checks and corrects the clinic vital-sign analysis. The raw data are in `data/`, reusable functions are in `code/`, the analysis script is in `scripts/`, and the write-up is in `manuscript/`.
+Junru Yao
 
-## Run the analysis
+In this homework, I corrected the errors in the original clinic analysis. My write-up explains the problems I found and compares the original results with the corrected results.
 
-From the repository directory, run:
+## How to run
+
+Open a terminal in the project folder and run:
 
 ```sh
 Rscript scripts/01_analyze.R
 ```
 
-The script uses a fixed seed and relative paths. It leaves the raw data unchanged and recreates results in the Git-ignored `output/` directory.
+The script creates the results in `output/`. This folder is not included on GitHub. If it is deleted, running the script again will recreate it. The raw data in `data/` are not changed.
 
-## Project files
+## Files
 
 ```text
-README.md
-LICENSE
-.gitignore
-data/extracted_records.csv
-code/analysis.R
-scripts/01_analyze.R
-output/ (generated; ignored by Git)
-manuscript/homework3.Rmd
+STAT5014-HW3/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── data/
+│   └── extracted_records.csv
+├── code/
+│   └── analysis.R
+├── scripts/
+│   └── 01_analyze.R
+├── output/
+└── manuscript/
+    └── homework3.Rmd
 ```
